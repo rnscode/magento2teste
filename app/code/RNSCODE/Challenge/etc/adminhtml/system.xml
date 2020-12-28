@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="integration" translate="label" sortOrder="10">
+            <label>Integração</label>
+        </tab>
+        <section id="integration_config" translate="label" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
+            <class>separator-top</class>
+            <label>Config ERP</label>
+            <tab>integration</tab>
+            <resource>RNSCODE_Challenge::integration_config_erp</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <depends>
+                        <field id="enabled" />
+                    </depends>
+                    <label>API KEY</label>
+                </field>
+                <field id="endpoint_uri" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <depends>
+                        <field id="enabled" />
+                    </depends>
+                    <label>Endpoint</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
