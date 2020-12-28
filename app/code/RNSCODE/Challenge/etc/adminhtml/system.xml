@@ -17,13 +17,13 @@
                 </field>
                 <field id="api_key" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <depends>
-                        <field id="enabled" />
+                        <field id="enabled">1</field>
                     </depends>
                     <label>API KEY</label>
                 </field>
                 <field id="endpoint_uri" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <depends>
-                        <field id="enabled" />
+                        <field id="enabled">1</field>
                     </depends>
                     <label>Endpoint</label>
                 </field>
